@@ -25,6 +25,9 @@ for example for an LRUCache we can just use a LinkedHashMap
 
 
 ## TreeMap
+- to use if you want to keep keys  in a sorted order, either in their natural order defined by Comparable interface or a custom order imposed by Comparator interface.
+
+## TreeSet 
 
 
 ## String 
@@ -37,4 +40,23 @@ for example for an LRUCache we can just use a LinkedHashMap
 * If a class is immutable and the cost of computing the hash code is significant, you might consider caching the hash 
   code in the object rather than recalculating it each time it is requested. If you believe that most objects of this type 
   will be used as hash keys, then you should calculate the hash code when the instance is created. 
-# JavaSourceCodeStudy
+
+## Heap 
+
+### Java's priority Queue 
+- Priority queue is represented as a balanced binary heap: the two children of queue[n] are queue[2*n+1] and queue[2*(n+1)].
+
+## Arrays
+
+
+## Enums
+
+### EnumSet 
+- You don't need to use it explicitly - it's just an implementation detail. Basically, when an enum is small, EnumSet can use a very efficient 
+  representation of the enum as a single int or long (I forget which) with one bit per member. When it has more elements than that representation 
+  allows, JumboEnumSet is used instead.
+  You don't need to worry about this - just use the members on EnumSet and you'll be fine. Just be aware that if your enums go over a certain size, 
+  then enum sets become more expensive and less efficient. 
+
+### EnumMap 
+
